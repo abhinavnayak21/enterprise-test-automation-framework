@@ -1,0 +1,21 @@
+environment: qa
+
+browser: chrome
+
+headless: false
+
+implicit_wait: 10
+
+explicit_wait: 20
+
+qa:
+  base_url: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+
+dev:
+  base_url: https://dev.example.com
+
+staging:
+  base_url: https://staging.example.com
+
+prod:
+  base_url: https://example.com
