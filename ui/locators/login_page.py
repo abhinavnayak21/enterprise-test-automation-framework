@@ -2,11 +2,17 @@ from selenium.webdriver.common.by import By
 
 
 class LoginPageLocators:
-    """Locators for the OrangeHRM login page."""
+    """Locators for the OrangeHRM Login Page."""
 
-    USERNAME_INPUT = (By.NAME, "username")
+    USERNAME_INPUT = (
+        By.NAME,
+        "username",
+    )
 
-    PASSWORD_INPUT = (By.NAME, "password")
+    PASSWORD_INPUT = (
+        By.NAME,
+        "password",
+    )
 
     LOGIN_BUTTON = (
         By.CSS_SELECTOR,
