@@ -25,6 +25,9 @@ screenshots/
 # Environment
 .env
 
+# Screenshots
+screenshots/*.png
+
 # OS
 .DS_Store
 Thumbs.db
