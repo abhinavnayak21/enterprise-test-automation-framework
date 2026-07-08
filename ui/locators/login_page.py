@@ -1,30 +1,25 @@
-from ui.locators.login_page import LoginPageLocators
-from ui.pages.base_page import BasePage
+from selenium.webdriver.common.by import By
 
 
-class LoginPage(BasePage):
-    """Page object for the login page."""
+class LoginPageLocators:
+    """Locators for the OrangeHRM Login Page."""
 
-    def enter_username(self, username: str) -> None:
-        self.enter_text(
-            LoginPageLocators.USERNAME_INPUT,
-            username,
-        )
+    USERNAME_INPUT = (
+        By.NAME,
+        "username",
+    )
 
-    def enter_password(self, password: str) -> None:
-        self.enter_text(
-            LoginPageLocators.PASSWORD_INPUT,
-            password,
-        )
+    PASSWORD_INPUT = (
+        By.NAME,
+        "password",
+    )
 
-    def click_login(self) -> None:
-        self.click(
-            LoginPageLocators.LOGIN_BUTTON,
-        )
+    LOGIN_BUTTON = (
+        By.CSS_SELECTOR,
+        "button[type='submit']",
+    )
 
-    def login(self, username: str, password: str) -> None:
-        """Perform a complete login."""
-
-        self.enter_username(username)
-        self.enter_password(password)
-        self.click_login()
+    DASHBOARD_HEADER = (
+        By.XPATH,
+        "//h6[text()='Dashboard']",
+    )
